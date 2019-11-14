@@ -11,15 +11,13 @@ Beer Reviews</br>
 - download kaggle dataset and explode zip, break up csv into <25MB pieces for github</br>
 - load csv's into Pandas and reassemble csv parts</br>
 </br>
-US Breweries
+US Breweries</br>
 - load csv's into Pandas and clean</br>
 </br>
 </br>
 Transform</br>
 <hr>
 Beer Reviews</br>
-- download kaggle dataset and explode zip, break up csv into <25MB pieces for github</br>
-- load csv's into Pandas and reassemble csv parts</br>
 - transform string to datetime</br>
 - transform strings to floats</br>
 </br>
