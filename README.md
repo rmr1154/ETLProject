@@ -13,7 +13,7 @@ Beer Reviews
 </br>
 US Breweries
 - load csv's into Pandas and clean
-
+</br>
 Transform</br>
 <hr>
 Beer Reviews
