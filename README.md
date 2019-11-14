@@ -4,7 +4,16 @@ Beer Reviews and Breweries
 - https://www.kaggle.com/brkurzawa/us-breweries
 - https://www.kaggle.com/rdoume/beerreviews
 
-Transformations
+
+Extract
+Beer Reviews
+- download kaggle dataset and explode zip, break up csv into <25MB pieces for github
+- load csv's into Pandas and reassemble csv parts
+
+US Breweries
+- load csv's into Pandas and clean
+
+Transform
 Beer Reviews
 - download kaggle dataset and explode zip, break up csv into <25MB pieces for github
 - load csv's into Pandas and reassemble csv parts
@@ -15,3 +24,5 @@ US Breweries
 - join to Beer Reviews where data exists
 - transform addresses into city, state, zip
 
+Load
+- load data sets into SQLite database
