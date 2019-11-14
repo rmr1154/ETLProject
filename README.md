@@ -13,7 +13,8 @@ Beer Reviews</br>
 </br>
 US Breweries
 - load csv's into Pandas and clean</br>
-<hr>
+</br>
+</br>
 Transform</br>
 <hr>
 Beer Reviews</br>
@@ -25,7 +26,8 @@ Beer Reviews</br>
 US Breweries</br>
 - join to Beer Reviews where data exists</br>
 - transform addresses into city, state, zip</br>
-<hr>
+</br>
+</br>
 Load</br>
 <hr>
 - load data sets into SQLite database</br>
