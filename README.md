@@ -7,25 +7,25 @@ Beer Reviews and Breweries
 
 Extract</br>
 <hr>
-Beer Reviews
-- download kaggle dataset and explode zip, break up csv into <25MB pieces for github
-- load csv's into Pandas and reassemble csv parts
+Beer Reviews</br>
+- download kaggle dataset and explode zip, break up csv into <25MB pieces for github</br>
+- load csv's into Pandas and reassemble csv parts</br>
 </br>
 US Breweries
-- load csv's into Pandas and clean
-</br>
+- load csv's into Pandas and clean</br>
+<hr>
 Transform</br>
 <hr>
-Beer Reviews
-- download kaggle dataset and explode zip, break up csv into <25MB pieces for github
-- load csv's into Pandas and reassemble csv parts
-- transform string to datetime
-- transform strings to floats
+Beer Reviews</br>
+- download kaggle dataset and explode zip, break up csv into <25MB pieces for github</br>
+- load csv's into Pandas and reassemble csv parts</br>
+- transform string to datetime</br>
+- transform strings to floats</br>
 </br>
-US Breweries
-- join to Beer Reviews where data exists
-- transform addresses into city, state, zip
-</br>
+US Breweries</br>
+- join to Beer Reviews where data exists</br>
+- transform addresses into city, state, zip</br>
+<hr>
 Load</br>
 <hr>
-- load data sets into SQLite database
+- load data sets into SQLite database</br>
