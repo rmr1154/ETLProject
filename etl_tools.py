@@ -2,18 +2,30 @@
 from cleanco import cleanco
 import pandas as pd
 
-def clean_co_names(df_in, col):
-    df = df_in.copy()
-    df['cleaned'] = df[col].str.upper() # uppercase
-    df['cleaned'] = df[col].str.replace(',', '') # Remove commas
-    df['cleaned'] = df[col].str.replace(' - ', ' ') # Remove hyphens
-    df['cleaned'] = df[col].str.replace(r"\(.*\)","") # Remove text between parenthesis 
-    df['cleaned'] = df[col].str.replace(' AND ', ' & ') #replace AND with &
-    df['cleaned'] = df[col].str.strip() # Remove spaces in the begining/end
-    df['cleaned'] = df[col].str.replace('.','') # Remove dots
-    df['cleaned'] = df[col].str.encode('utf-8') # Encode
-    df['cleaned'] = df[col].apply(lambda x: cleanco(x).clean_name() if type(x)==str else x) # Remove business entities extensions (1)
-    df['cleaned'] = df[col].apply(lambda x: cleanco(x).clean_name() if type(x)==str else x) # Remove business entities extensions (2) - after removing the dots
+def clean_co_names(df, col):
+    df['cleaned'] = df[col]
+    #print(f'Sample: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.upper() # uppercase
+    print(f'Set Upper')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.replace(',', '') # Remove commas
+    print(f'Remove commas')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.replace(' - ', ' ') # Remove hyphens
+    print(f'Remove hyphens')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.replace(r"\(.*\)","") # Remove text between parenthesis 
+    print(f'Remove text between parens')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.replace(' AND ', ' & ') #replace AND with &
+    print(f'replace AND with &')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.strip() # Remove spaces in the begining/end
+    print(f'Remove leading/trailing spaces')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'] .apply(lambda x: cleanco(x).clean_name() if type(x)==str else x) # Remove business entities extensions (1)
+    print(f'Cleanco Pass1')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'].str.replace('.','') # Remove dots
+    print(f'Remove dots')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'] .str.encode('utf-8') # Encode
+    print(f'Encode utf-8')#: {df.cleaned.head(1)}')
+    df['cleaned'] = df['cleaned'] .apply(lambda x: cleanco(x).clean_name() if type(x)==str else x) # Remove business entities extensions (2) - after removing the dots
+    print(f'Cleanco Pass2')#: {df.cleaned.head(1)}')
+    #print(f'Final Transform: {df[col].head(1)} - {df.cleaned.head(1)}')
     return df
 
 
