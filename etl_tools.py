@@ -1,6 +1,8 @@
 #pip install cleanco
+#pip install fastparquet
 from cleanco import cleanco
 import pandas as pd
+import sqlite3 as sq
 
 def clean_co_names(df, col):
     df['cleaned'] = df[col]
@@ -36,4 +38,33 @@ def convert_epoch_time(df,col_list):
         df[col] = pd.to_datetime(df[col],unit='s')
     return df
 
+def split_address(df,col):
+    #do stuffs
+    return df    
+
  
+def web_screenshot(df,col):
+    #grab screenshot w/ splinter
+    return df
+
+#Let's export everything to parquet
+def export_parquet(table):
+    for table in table_list:
+        table.reset_index(drop=True).to_parquet('data/'+table+'.parquet', engine='fastparquet', compression='gzip') 
+        
+
+def export_sqlite(table,dbname):
+    sql_data = f'data/{dbname}.db'
+    #etl.sq.register_adapter(etl.np.int64, lambda val: float(val))
+    conn = sq.connect(sql_data)
+    cur = conn.cursor()
+    for table in table_list:
+        try:
+            dropstring = '''drop table if exists "{0}"'''.format(table)
+            print(dropstring)
+            cur.execute(dropstring)
+            table.to_sql(table,conn, if_exists='replace', index=False)
+        except:
+            pass
+    conn.commit()
+    conn.close() 
