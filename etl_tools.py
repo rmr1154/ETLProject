@@ -68,3 +68,7 @@ def export_sqlite(table,dbname):
             pass
     conn.commit()
     conn.close() 
+    
+def hash_dim(table):
+    
+    return table
