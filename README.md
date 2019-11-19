@@ -23,6 +23,7 @@ Beer Reviews</br>
 - Drop Duplicate Names after etl.clean_co_names()</br
 - Join brewery_names_df back in</br>
 -Stripe whitespaces from all columns</br>
+- Drop reviews for unknown brewries<br/>
 - Set final indexes and column names</br>
 </br>
 
