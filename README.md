@@ -62,3 +62,4 @@ Load</br>
 Overview</br>
 <hr>
 With the dataset created in this ETL process, the user will be able to retrieve all kind of information from it. For example it is possible to query the best rated beers in Orlando, what kind of beer this brewery is offering as weLl as the rating for that beer and the alcooholic percentage on it, the beer reviews covers different aspects of the beer, so it can narrow down to the users specific needs. The user would be able to have the address and the website in hands in order to do further exploration. Given more time we would build an Flask appliation in order to provide a better interactivity feature for the data created.</br>
+
