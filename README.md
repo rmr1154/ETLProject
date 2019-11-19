@@ -20,7 +20,7 @@ ETL_app.py loads the following modules
   pandas</br>
   sqlite3</br>
   numpy</br>
-  time</br>]
+  time</br>
   
 
 
