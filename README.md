@@ -5,6 +5,14 @@ Instructions</br>
 - Run ETL_app.py</br>
 </br>
 </br>
+ETL_app.py loads the following modules
+</br>
+<ul>
+  <li>etl_tools.py - supporting toolset</li>
+  <li>extract.py - main extract module</li>
+  <li>transform.py - main transform module</li>
+  <li>load.py - main load module</li>
+  </ul>
 
 
 Beer Reviews and Breweries
