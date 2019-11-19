@@ -13,6 +13,15 @@ ETL_app.py loads the following modules
   <li>transform.py - main transform module</li>
   <li>load.py - main load module</li>
   </ul>
+  </br>
+  <h5>Modules Used</h5>
+  cleanco (pip install cleanco)</br>
+  zipfile</br>
+  pandas</br>
+  sqlite3</br>
+  numpy</br>
+  time</br>]
+  
 
 
 Beer Reviews and Breweries
