@@ -1,5 +1,12 @@
 # ETLProject
 
+Instructions</br>
+<hr>
+- Run ETL_app.py</br>
+</br>
+</br>
+
+
 Beer Reviews and Breweries
 - https://www.kaggle.com/brkurzawa/us-breweries
 - https://www.kaggle.com/rdoume/beerreviews
